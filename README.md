@@ -1,4 +1,3 @@
-```markdown
 # 🐍 Python Mastery Journey
 
 Welcome to my Python learning repository.
@@ -60,6 +59,7 @@ This repository will continuously grow as I learn new concepts and build more pr
 Each folder contains a specific topic or mini-project.
 
 Example:
+
 ```
 
 python-mastery-journey/
@@ -129,4 +129,7 @@ Python Developer in Progress 🚀
 - Apply clean code principles
 - Add documentation for each project
 - Convert some projects into production-ready applications
+
+```
+
 ```
