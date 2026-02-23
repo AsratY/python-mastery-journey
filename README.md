@@ -64,7 +64,8 @@ Example:
 
 python-mastery-journey/
 │
-├── fundamentals/
+├── Fundamentals/
+├── Intermediate/
 ├── oop/
 ├── mini-projects/
 ├── automation/
