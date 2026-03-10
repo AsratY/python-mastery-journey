@@ -1,0 +1,7 @@
+{
+  "asctime": "2026-Mar-10-Tue 20:32:19",
+  "levelname": "ERROR",
+  "name": "error_logger",
+  "message": "division by zero",
+  "user": "ABC123"
+}
