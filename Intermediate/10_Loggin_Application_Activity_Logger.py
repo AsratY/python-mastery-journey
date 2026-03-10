@@ -1,3 +1,29 @@
+# 🔟 Logging — Application Activity Logger
+
+# 🎯 Build: User activity tracker.
+
+# 🛠 Use: logging module
+
+# 📋 Instructions
+
+# Log:
+
+# Program start
+
+# User actions
+
+# Errors
+
+# Write logs to a file.
+
+# Use different log levels.
+
+# ⭐ Upgrade
+
+# Rotate log files
+
+# Timestamp formatting
+
 import log.activity_logger as activity_logger
 import logging
 
