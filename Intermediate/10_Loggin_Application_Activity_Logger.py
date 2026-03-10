@@ -56,7 +56,7 @@ if user_name == "ABC123":
                 logger.info("application stopped by error")
             else:
                 print(f"{num_one} / {num_two} = {result}")
-                logger.info("application ended with out error")
+                logger.info("application ended without error")
     else:
         logger.warning("Incorrect Password!!")
 else:

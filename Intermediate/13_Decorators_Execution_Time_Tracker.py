@@ -19,14 +19,33 @@
 # Count function calls
 
 import time
+import logging
+
+
+logger = logging.getLogger(__name__)
+file_h = logging.FileHandler('./log/performance.log')
+file_h.setLevel(logging.DEBUG)
+file_f = logging.Formatter(
+    '%(asctime)s - %(levelname)s - %(name)s - %(function)s - %(message)s', '%Y-%b-%d-%a %H:%M:%S')
+file_h.setFormatter(file_f)
+logger.addHandler(file_h)
+logger.setLevel(logging.DEBUG)
 
 
 def performance_analyzer(func):
+    counter = 0
+
     def time_checker(*args, **kwargs):
+        nonlocal counter
+        counter += 1
         start = time.perf_counter()
         result = func(*args, **kwargs)
         end = time.perf_counter()
-        print(f"Total Execution Time: {(end - start)*1000}")
+        performance = (end - start)*1000
+        logger.debug(f"Total Execution Time: {performance}",
+                     extra={"function": func.__name__})
+        print(
+            f"Total Execution Time: {performance} \nFunction: {func.__name__} called {counter} Times")
         return result
     return time_checker
 
@@ -41,9 +60,6 @@ def recursion_wrapper(value):
         else:
             return number * recursion_factorial(number-1)
     return recursion_factorial(value)
-
-
-print(recursion_wrapper(990))
 
 
 @performance_analyzer
@@ -63,6 +79,13 @@ def loop_factorial(number):
     return value
 
 
-print(loop_factorial(990))
-
-# Upgrade will be implimented
+recursion_wrapper(990)
+loop_factorial(990)
+recursion_wrapper(990)
+loop_factorial(990)
+recursion_wrapper(990)
+loop_factorial(990)
+recursion_wrapper(990)
+loop_factorial(990)
+recursion_wrapper(990)
+loop_factorial(990)
